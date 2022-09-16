@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Invoice Details</title>
+    <style> table, th, td {
+        border:1px solid blue;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <h2>Invoice Details.</h2>
+            <Label>Invoice to:</Label>
+            <input type="text" name="FullName" maxlength="50" placeholder="Full Name">
+        </div>
+        <div> 
+            <Label>Mobile Number:</Label>
+            <input type="text" name="MobileNumber" maxlength="11" placeholder="Mobile Number">
+        </div>
+        <div>
+            <Label>Date:</Label>
+            <input type="date" name="Date" max="11">
+        </div>
+
+        <fieldset>
+        <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Item Description</th>
+                <th>Qty</th>
+                <th>Amount</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td><input name="ItemDescription1"></textarea></td>
+                <td><input name="Qty1" type="number"/></textarea></td>
+                <td><input name="Amount1" type="number"/></textarea></td>
+                <td><input name="TotalAmount1" type="number"/></textarea></td>
+            </tr>
+            <tr>
+                <td><input name="ItemDescription2"></textarea></td>
+                <td><input name="Qty2" type="number"/></textarea></td>
+                <td><input name="Amount2" type="number"/></textarea></td>
+                <td><input name="TotalAmount2" type="number"/></textarea></td>
+            </tr>
+            <tr>
+                <td><input name="ItemDescription3"></textarea></td>
+                <td><input name="Qty3" type="number"/></textarea></td>
+                <td><input name="Amount3" type="number"/></textarea></td>
+                <td><input name="TotalAmount3" type="number"/></textarea></td>
+            </tr>
+            <tr>
+                <td><input name="ItemDescription4"></textarea></td>
+                <td><input name="Qty4" type="number"/></textarea></td>
+                <td><input name="Amount4" type="number"/></textarea></td>
+                <td><input name="TotalAmount4" type="number"/></textarea></td>
+            </tr>    
+            
+            <tr>
+                <td colspan="3" style=text-align:right>Sub Total</td>
+            </tr>
+            <tr>
+                <td colspan="3" style=text-align:right>Vat</td>
+            </tr>
+                <td colspan="3" style=text-align:right>Grand Total</td>
+
+            </fieldset>
+        </tbody>
+        </table>
+       
+        <br> 
+        <fieldset>
+             <legend>Additional Details</legend>
+             <label>Payment Method</label>
+             <select name="PaymentMethod">
+             <option value="">Select Method</option>
+             <option value="Debit/CreditCard">Debit/Credit Card</option>
+             <option value="GCash">GCash</option>
+             <option value="COD">COD</option>
+
+
+            </select>
+
+        <div>
+        </fieldset>
+        <br>
+        <label for="Home">Home</label>
+        <input type="radio" id="Home" name="HomeorOffice">
+        <label for="Office">Office</label>
+        <input type="radio" id="Office" name="HomeorOffice">
+    </div>
+        
+        
+        <div>
+
+
+            
+        <textarea name="DeliveryAddress" placeholder="Delivery Address" rows="5" cols="50"> </textarea>
+        </div>
+
+        <div>
+            <input type="Submit" value="Submit"/>
+      
+
+           
+        </div>
+
+
+
+    </form>
+    
+</body>
+
+ </html>
+
