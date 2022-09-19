@@ -1,0 +1,86 @@
+body{
+    margin:0;
+}
+
+.page-wrapper {
+    max-width: 1024px;
+    margin: 0px auto 30px auto;
+    padding: 0px 30px 15px 30px;
+}
+
+header {
+    height:50px;
+    width: 100%;
+    background-color: #04253a;
+    color: #e1ddbf;
+    font: 14px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.banner {
+   height: 400px;
+   background-image: url('../images/Portfolioweb.png');
+   background-size:cover;
+   background-position:top;  
+}
+
+h1{
+   color: #4c837a;
+   text-align: center;
+   padding-top: 30px;
+   font-size: 60px;
+   text-shadow: 0 0 2px black;
+}
+
+h2{
+    color:#e1ddbf;
+    text-align:center;
+    font-size: 40px;
+    text-shadow: 0 0 4px black;
+}
+
+section.about-me{
+    font: 18px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+section.my-portfolio div{
+    background-color: #2b6a6c;
+    border: 1px solid #000;
+}
+
+h3 {
+    color: #e1ddbf;
+    text-align: center;
+    font-size: 40px;
+    background-color: #2b6a6c;
+    height: 60px;
+}
+
+
+section.my-portfolio.div.d-flex{
+    flex-wrap: wrap;
+    text-align: justify;
+    background-color: none;
+    border: none;
+    padding: 15px;
+    justify-content: center;
+}
+
+.d-flex>.d-inline{
+    display: inline-block;
+    width: 180px;
+    padding: 15px;
+    margin: 15px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 5px 10px #ccc;
+    border-radius: 4px;
+}
