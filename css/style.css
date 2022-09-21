@@ -7,19 +7,19 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     padding: 15px; /*applicable to all side* top right bottom left*/
-    background-color: #e3dfc2;
 }
 
 header {
-    height: 30px;
+    height: 50px;
     width:100%;
     background-color:#04253a;
     color:#e3dfc2;
-    padding-top: 10px;
+    padding-top: 5px;
     position: fixed;
     left: 0px;
     top: 0px;
 }
+
 
 .banner{
     height:400px;
@@ -91,3 +91,70 @@ section.my-portfolio .d-flex p{
     font-size: 14px;
 }
 
+header.navbar ul.d-flex{
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color: #67958e;
+    border: none;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#ccc;
+    line-height: 50px;
+}
+
+nav ul li:hover a{
+    color: yellow;
+}
+
+nav ul li:hover{
+    background-color:#67958e;
+}
+
+header nav {
+    display:inline;
+}
+
+nav ul li{
+    display:inline-block;
+    padding: 0 10px;
+}
+
+@media screen and (max-width:992px) {
+    header {
+        height: auto;
+        position: absolute;
+        background-color: white;
+    }
+
+    .banner{
+        margin-top: 280px;
+    }
+
+    nav ul li{
+        display: block;
+    }
+    
+    }
+
+@media screen and (max-width:768px) {
+    header {
+            height: auto;
+            position: absolute;
+            background-color: #04253a;
+        }
+    
+    .banner{
+            background-image:none;
+            background-color: #67958e;
+        }
+    
+        
+        }
