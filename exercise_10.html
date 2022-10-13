@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Invoice Details</title>
+    <meta name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javascript"></script>     
+    <style> 
+
+    label{
+        text-align: center;
+
+    }
+
+   
+
+    </style>
+</head>
+
+<body>
+
+
+    <h2 style="text-align:center; color: orange; margin:50px auto 20px auto">Invoice Details</h2>
+    
+
+
+    <div class="container">
+        <form class="border p-3 my-5 rounded" action="#">
+            <div class="row">
+                <div class="col my-3">
+                    <div class="d-flex justify-content-end" style="margin: auto 80px auto auto" >
+                        <input id="curr_aud" class="form-check-input" type="radio" name="currency"/>
+                        <label for ="curr_aud" class="form-label me-3">AUD</label>
+                        <input id="curr_php"class="form-check-input" type="radio" name="currency"/>
+                        <label for ="curr_php" class="form-label me-3">PHP</label>
+                        <input id="curr_usd" class="form-check-input" type="radio" name="currency"/>
+                        <label for ="curr_usd" class="form-label me-3">USD</label>
+                    </div>
+                </div>
+            </div>
+
+                 <div class="row">
+                    <div class="d-flex justify-content-end">
+                        <div class="my-3 col-3">
+                            <Label class="form-label">Date:</Label>
+                            <input class="form-control right-align" type="date" name="Date">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">      
+                        <Label class="form-label">Invoice to:</Label>
+                        <input class="form-control" type="text" name="invoice_to"/>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="my-3 col">
+                        <div class="form-floating">
+                            <Label class="form-label">Mobile Number:</Label>
+                            <input class="form-control" type="text" maxlength="11" name="mobile_number"/>
+                        </div>
+                    </div>
+                
+                    <div class="my-3 col">
+                        <div class="form-floating">
+                            <Label class="form-label">Email Address:</Label>
+                            <input class="form-control" type="text" name="email"/>
+                        </div>
+                    </div>
+                
+                    
+
+                </div>
+            <div style="border: 1px solid azure; margin: 5px; padding: 50px; background-color:azure;">
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <Label class="form-label">Item Description</Label>
+                            <input class="form-control" type="name" name="item_description1"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <Label class="form-label">Quantity</Label>
+                            <input class="form-control" type="number" name="Quantity1"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <Label class="form-label">Amount</Label>
+                            <input class="form-control" type="number" name="Amount1"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <Label class="form-label">Total Amount</Label>
+                            <input class="form-control" type="number" name="Total_Amount"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="name" name="item_description2" />
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="Quantity2"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="Amount2"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="invoice_to"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="name" name="item_description3"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="Quantity3"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="Amount3"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="invoice_to"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="name" name="item_description4"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="Quantity4"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="Amount4"/>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="number" name="invoice_to"/>
+                        </div>
+                    </div>
+                <div class="d-flex justify-content-end">
+                    <div class="row">
+                        <div class="col-6 my-1">
+                            <label class="form-label">Sub Total</label>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="name" name="Sub_Total"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="row">
+                        <div class="col-6 my-1">
+                            <label class="form-label">Vat</label>
+                        </div>
+                        <div class="col-3 my-1">
+                            <input class="form-control" type="name" name="Vat"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="row">
+                        <div class="col col-6 my-1">
+                            <label class="form-label">Grand Total</label>
+                        </div>
+                        <div class="col col-3 my-1">
+                            <input class="form-control" type="name" name="Grand_Total"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+                
+            
+              
+
+            
+
+
+                    <tr>
+                        <td colspan="3" style=text-align:right>Sub Total</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style=text-align:right>Vat</td>
+                    </tr>
+                        <td colspan="3" style=text-align:right>Grand Total</td>
+
+
+                    <div class="row">
+                        <div class="col-6 my-3">
+                            <label class="form-label">Payment Method</label>
+                            <select class="form-select" name="payment_method">
+                                <option>Select Method</option>
+                                <option>Debit/Credit Card</option>
+                                <option>GCASH</option>
+                                <option>Paypal</option>
+                                <option>Cash on Delivery</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <h4>Add-Ons</h4>
+                    <div class="row">
+                        <div class="col my-1">
+                            <input id= "gift_wrapper" class="form-check-input" type="checkbox" name="gift_wrapper"/>
+                            <label for="gift_wrapper" class="form-label me-3">Gift Wrapper</label>
+                            <input id= "thankyouletter" class="form-check-input" type="checkbox" name="thankyouletter"/>
+                            <label for="thankyouletter" class="form-label me-3">Thank You Letter</label>
+                        </div>
+                    </div>
+                    <!--Delivery Address-->
+                    <div class="row">        
+                        <textarea class="form-control" name="DeliveryAddress" placeholder="Delivery Address"> </textarea>
+                    </div>
+                    
+                    <button type="btn btn-primary" style=" margin: 20px auto auto auto;">Submit</button>
+                        
+                   
+        </form>
+    </div>         
+    
+    
+</body>
+
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>Bootstrap Exercise</title>
+        <meta name="viewport" content="width=device-width, initial-scale-1"/>
+        <script type="text/javascript"> src="js/kodego.js"</script>
+</head>
+
+<body> 
+
+    <input type="number" id="number"  placeholder="place number here" />
+    <button onclick="doCheck()">Do Check</button>
+    <div id="result"></div>
+
+    <input type="text" id="letter1"  placeholder="place letter here" maxlength="1"/>
+    <button onclick="vowelOrConsonant()">Do Check</button>
+    <div id="result2"></div>
+    
+
+    <script>
+        function doCheck (){
+            let numberA = document.getElementById('number').value;
+
+            if (numberA % 2 == 1) {
+                document.getElementById('result').innerHTML="The number is ODD."
+            }else {
+                document.getElementById('result').innerHTML="The number is EVEN."
+            }
+        }
+
+    function vowelOrConsonant()   {
+        let charA = (document.getElementById('letter1').value).toUpperCase();
+        if (charA == 'A' || charA == 'E' || charA == 'I' || charA == 'O' || charA == 'U'){
+             document.getElementById('result2').innerHTML="Letter "+ charA +" is a VOWEL."
+        }else {
+        document.getElementById('result2').innerHTML="Letter "+ charA +" is a CONSONANT."
+        }
+    }
+
+</script>
+
+
+
+
+      </body>
+      
+    </html>
