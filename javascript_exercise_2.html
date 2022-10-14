@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>Javascript Exercise 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale-1"/>
+        <script type="text/javascript"> src="js/kodego.js"</script>
+</head>
+
+<body> 
+    <input type="text" id="letter1"  placeholder="place letter here" maxlength="1" onkeyup="vowelOrConsonant" />
+    <div id="result"></div>
+    <button onclick="vowelOrConsonant()">Do Check</button>
+
+
+    <div>
+    <input type="text" id="first_number"  placeholder="place first_number here" />
+    <input type="text" id="second_number"  placeholder="place second_number here" />
+    <div id="result2"></div>
+    <button id="add" onclick="calculator('+')">+</button>
+    <button id="subtract" onclick="calculator('-')">-</button>
+    <button id="multiply" onclick="calculator('*')">*</button>
+    <button id="division" onclick="calculator('/')">/</button>
+    <button id="equal" onclick="calculator('=')">=</button>
+    </div>
+
+</body>
+
+<script>
+let method;
+function vowelOrConsonant(){
+    let char1 = (document.getElementById('letter1').value).toLowerCase();
+
+    switch (char1){
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            document.getElementById("result").innerHTML = "Letter "+ char1 +" is vowel.";
+            break;
+        default:
+            document.getElementById("result").innerHTML = "Letter "+ char1 +" is consonant.";
+            break;
+        }
+    }
+
+function calculator (method){
+    let x= parseInt(document.getElementById('first_number').value);
+    let y= parseInt(document.getElementById('second_number').value);
+
+    switch(method) {
+        case "+":
+            document.getElementById("result2").innerHTML = x+y;
+            break;
+        case "-":
+            document.getElementById("result2").innerHTML = x-y;
+            break;
+        case "*":
+            document.getElementById("result2").innerHTML =x*y;
+            break;
+        case "/":
+            document.getElementById("result2").innerHTML = x/y;
+            break;
+        default:
+            document.getElementById("result2").innerHTML = "none";
+            break;
+            }
+        }
+
+    
+</script>
+
+</html>
