@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head> 
-    <title>Invoice Details</title>
+<head>
+    <title>Trials</title>
     <meta name="viewport"/>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="js/bootstrap.min.js" type="javascript"></script>     
-    <style> 
+    <script src="js/bootstrap.min.js" type="javascript"></script>
+    <script type="text/javascript" src="js/kodego.js"></script>
+
+    <style>
 
 
     </style>
 </head>
 
 <body>
-    <div class="container">
+
+    <input id="numberField" type="number" placeholder= 'oddEvenNumber'/>
+    <button class="btn" onclick="oddEvenNumber()">Check Here</button>
+    <div id="result1"></div>
+
+
+    <input id="num10" onkeyup="Divby10(event)" placeholder="isTheNumberDivBy10"/>
+    <div id="result4"></div>
+
+    <input id="letters" placeholder="vowelConsonant"/>
+    <button class="btn" onclick="VowConst()">Check Here</button>
+    <div id="result5"></div>
+
+    <input id="letters1" placeholder="vowelConsonantSwitchCase"/>
+    <button class="btn" onclick="VowConstSwit()">Check Here</button>
+    <div id="result6"></div>
+
+
+    <div>
+        <input type="text" id="num1"  placeholder="place first_number here" />
+        <input type="text" id="num2"  placeholder="place second_number here" />
+        <div id="result7"></div>
+        <button id="add" onclick="Calc('+')">+</button>
+        <button id="subtract" onclick="Calc('-')">-</button>
+        <button id="multiply" onclick="Calc('*')">*</button>
+        <button id="division" onclick="Calc('/')">/</button>
+        <button id="equal" onclick="Calc('=')">=</button>
+    </div>
+
+    <div id="result8"></div>
+
+    <!-- <div class="container">
         <form action="#">
             <h2>Invoice Details</h2>
-                    <div class="my-2 col">      
+                    <div class="my-2 col">
                         <Label class="form-label">Invoice to:</Label>
                         <input type="form-control" type="text" name="invoice_to"/>
-                    </div> 
-                    
+                    </div>
+
                     <div class="my-2 col">
                         <Label class="form-label">Date:</Label>
                         <input class="form-control" name="Date" max="11">
@@ -48,7 +81,7 @@
 
 
 
-            
+
             <div class="home-content container ">
                 <h1 class="text-center pt-5 pb-3">Sélection d'un portefeuille </h1>
                 <form>
@@ -63,7 +96,7 @@
 
 
 
-                    
+
                     <div class="row row-cols-3 pt-3">
                         <div class="col text-end">
                             <label for="nameVariable" class="form-label">Intitulé</label>
@@ -74,7 +107,263 @@
                     </div>
                     <div class="row row-cols-3 pt-3">
                         <div class="col">
-                        </div>
+                        </div>-->
+
+
+
+        <!-- for (let i=0; i<10; i++){
+            console.log('loop' + i)
+            if(i===3) break;
+
+
+            }
+
+        const names = ['Ana', 'Peter', 'Pepa','Maris'];
+        for (let i=0; i<names.length; i++) {
+            console.log (names[i]);
+        }
+
+        const lists = ['Ana', 'Peter', 'Pepa','Maris'];
+        for (list of lists){
+            console.log(list );
+        }
+
+        let x=0
+        while (x<21) {
+            x++;
+            if (x===5) continue;
+            console.log(x);
+        }
+
+
+        const user = {'firstName': 'Maris', 'lastName': 'Santos' }
+        for(list in user) console.log(user[list]);
+
+
+        const landanimals = ['dog', 'cat','monkey']
+        landanimals.forEach (animal=> {
+            console.log(animal);
+        } -->
+
+
+        <script>
+
+          /*  let friends = ["Eunice","Jennifer","Alice", "Mark"];
+            alert (friends[0]);
+
+
+            let name = "Eunice";
+            if(name=="Jennifer"){
+                alert("That's my name too");
+            }else{
+                alert("My name is " + name)
+            }
+
+
+            var myVariable = #;|
+                if(myVariable > 5) {
+                alert ("upper");
+                } else {
+                alert ("lower");
+                }
+
+                for( var integer = 2; integer <= 5; integer++ ) {
+                alert( integer );
+                }
+
+
+                var items = ["foo", "bar", "baz"]; // First we create an array.
+                    for( var x = 0; x < items.length; x++ ) {
+                    alert( items[x] ); // This will alert each item in the array.
+                    }
+
+
+                    alert("I've been a function all along!");*/
+
+
+            /*let nae = [1, 2, 3, 4, 5, 6, 8];
+                    forr(nae);
+
+            addnumbers (5,77);
+
+            foo ();*/
+
+            //Odd and Even Number with input field
+            function oddEvenNumber (){
+                let x = document.getElementById('numberField').value;
+                if(x%2==0){
+                    document.getElementById('result1').innerHTML = x + " is an Even number"
+                }else{
+                    document.getElementById('result1').innerHTML = x + " is an odd number"
+                }
+
+            }
+
+             // Divisible by 10, or can be divisible by any number
+             function Divby10(){
+                let x = document.getElementById('num10').value;
+                    if (x % 10 == 0){
+                        document.getElementById('result4').innerHTML="true"
+                    }else {
+                        document.getElementById('result4').innerHTML="false"
+                    }
+                    }
+
+                // Vowel and Consonant using if...else
+                function VowConst(){
+                let vow = (document.getElementById('letters').value).toLowerCase();
+                    if (vow == "a" || vow == "e" || vow == "i" || vow == "o" || vow == "u" ){
+                        document.getElementById('result5').innerHTML= vow + " is a vowel"
+                    }else {
+                        document.getElementById('result5').innerHTML= vow + " is a consonant"
+                    }
+                    }
+
+                //JS Exercise 2
+                //switch case for more specific data
+
+                // Vowel and Consonant using switch case
+                function VowConstSwit(){
+                let vowconst =  (document.getElementById('letters1').value).toLowerCase();
+                switch(vowconst){
+                    case "a":
+                    case "e":
+                    case "i":
+                    case "o":
+                    case "u":
+                        document.getElementById('result6').innerHTML= vowconst + " is a vowel";
+                        break;
+                    default:
+                        document.getElementById('result6').innerHTML= vowconst + " is a consonant";
+                }
+                }
+
+                // Exercise 2_Machine Problem 2
+                //define the parameter
+
+                function Calc(method){
+                let x =  parseInt(document.getElementById('num1').value);
+                let y = parseInt(document.getElementById('num2').value);
+                switch(method){
+                    case "+":
+                        document.getElementById('result7').innerHTML= x+y;
+                        break;
+                    case "-":
+                        document.getElementById('result7').innerHTML= x-y;
+                        break;
+                    case "*":
+                        document.getElementById('result7').innerHTML= x*y;
+                        break;
+                    case "/":
+                        document.getElementById('result7').innerHTML= x/y;
+                        break;
+                    default:
+                        document.getElementById('result7').innerHTML = "none";
+                    break;
+                    }
+                }
+
+
+
+                // JS Exercise 3
+                //Given the data above, determine the number of staff with age greater than 30 years old.
+            let staff = [{name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"]},
+                        {name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"]},
+                        {name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"]},
+                        {name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"]},
+                        {name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"]},
+                        {name:"Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"]},
+                        {name:"Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"]},
+                        {name:"Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"]},
+                        {name:"Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"]}];
+
+            
+           // let staff = [30, 32, 33, 1]
+
+
+                 // Given the data above, determine the number of staff with age greater than 30 years old.
+                let numOfStaffAged30Above = 0;
+                let counter = 0;
+                while(counter < staff.length){
+                    if(staff[counter].age > 30){
+                        numOfStaffAged30Above++;
+                    }
+                    counter++;
+                }
+
+                document.getElementById('result8').innerHTML = numOfStaffAged30Above;
+
+
+                //Given the data above, determine the number of staff that can speak Spanish.
+
+                let numOfSpanishSpeaker = 0;
+                let spanishCounterX = 0;
+                while(spanishCounterX < staff.length){
+
+                let spanishCounterY = 0
+                while (spanishCounterY < staff[spanishCounterX].languages.length){
+                    if(staff[spanishCounterX].languages[spanishCounterY] == "spanish"){
+                        numOfSpanishSpeaker++;
+                    }
+                    spanishCounterY++;
+                }
+                spanishCounterX++;
+                }
+
+                console.log (numOfSpanishSpeaker + " spanish speakers");
+                
+                
+                //Create a function that counts the number with the same value in a 2 consecutive order.
+                let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+
+                function sameValue (){
+                    let numOfSameValue = 0;
+                    let prevNumber = 0;
+                    
+                    for (let i=0; i < numbers.length; i++){
+                        if(numbers[i]/prevNumber==1){
+                        numOfSameValue++;
+                    }
+                    numbers[i]/prevNumber==1;
+                }
+            }
+
+               alert(numOfSameValue);
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+
 
 
 
