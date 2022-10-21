@@ -2,25 +2,76 @@
 <html>
     <html>
     <head>
-        <title>Conditional JS</title>
+        <title>JavaScript Hands on Exercise 5</title>
         <meta name="viewport" content="width=device-width, initial-scale-1"/>
         <script type="text/javascript"> src="js/kodego.js"</script>
 </head>
 
 <body> 
-
+    <div id="result1" onkeyup="DivBySeven"></div>
+    <input id="result2"></input>
 
 <script>
-    let divisibleby7 = [7,14,21,28]
-    let prevdiv = 0
-    for (let x = 0; x<=divisibleby7; x++)
-    if (prevdiv== divisibleby7[x]){
-        
+
+// Create a function that accepts a number and output the next number in sequence that is divisible by 7.
+
+// Examples:
+
+// Input number is 1, the output is 7
+// Input number is 16, the output is 21
+// Input number is 77, the output is 77
+
+let numberA = document.getElementById('result1').value;
+
+
+
+function DivBySeven (inputNum){
+    for(inputNum; inputNum <= inputNum +7; inputNum++){
+        if(inputNum % 7 == 0){
+            return inputNum;
+        }
     }
+}
+// function onKeyUpHandler(e)
+// document.getElementById("result1").innerHTML += DivBySeven(e.currentTarget.value);
+
+
+
+
+
+
+
+
+let invoiceItems = [{description: "Mouse", Qty: 3, unitPrice: 200}, 
+                {description: "Keyboard", Qty: 3, unitPrice: 400},
+                {description: "Monitor", Qty: 6, unitPrice: 5400},
+                {description: "CPU Tower Case", Qty: 3, unitPrice: 1200},
+                {description: "Headset", Qty: 3, unitPrice: 500},
+                {description: "UPS", Qty: 1, unitPrice: 4000},];
+
+
+    let tableElem = "<div><table class='table'>";
+                tableElem += "<tr>";    
+                tableElem += "<th>Description</th>";    
+                tableElem += "<th>Qty</th>";    
+                tableElem += "<th>Unit Price</th>";    
+                tableElem += "<th>Amount</th>";    
+                tableElem += "</tr>"; 
+          invoiceItems.forEach(function(value, index, array){
+                tableElem += "<tr>";    
+                tableElem += "<td>"+ value.description +"</td>";    
+                tableElem += "<td>"+ value.Qty +"</td>";    
+                tableElem += "<td>"+ value.unitPrice +"</td>";    
+                tableElem += "<td>" + value.Qty * value.unitPrice; "</td>";
+                tableElem += "</tr>";    
+            });
+
+            document.getElementById("result2").innerHTML += tableElem + "</table></div>";
+
 
 
 </script>
-    function 
+
 
 
 

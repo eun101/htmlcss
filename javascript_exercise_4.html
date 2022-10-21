@@ -2,7 +2,7 @@
 <html>
     <html>
     <head>
-        <title>JavaScript Hands on Exercise 1</title>
+        <title>JavaScript Hands on Exercise 4</title>
         <meta name="viewport" content="width=device-width, initial-scale-1"/>
         <script type="text/javascript"> src="js/kodego.js"</script>
 </head>
@@ -12,9 +12,34 @@
 
 <script>
 
-let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
 
-//Create a function that counts the number with the same value in a 2 consecutive order.
+function countSameValue(list, consecutive=2){
+    let prevNum = 0;
+    let totalConsec = 0;
+    let sequence = 0;
+    for(let i=0; i< list.length; i++){
+        if(prevNum == list[i]){
+            sequence++;
+        }else{
+            sequence = 0;
+        }
+
+        if(sequence == (consecutive - 1)){
+            totalConsec++;
+            sequence = 0;
+            prevNum = 0;
+        }else{
+            prevNum = list[i];   
+        }
+    }
+
+    return totalConsec;
+}
+
+console.log(countSameValue(numbers));
+console.log(countSameValue(numbers, 3));
+console.log("4 consecutive" + countSameValue(numbers, 4));
 
 
 
